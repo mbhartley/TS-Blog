@@ -13,3 +13,7 @@ python3 -m http.server 4173
 ```
 
 Then open `http://localhost:4173` in your browser.
+
+## Notes
+
+- The hero image is loaded from Unsplash (`images.unsplash.com`) to avoid committing binary assets in this demo repository.
