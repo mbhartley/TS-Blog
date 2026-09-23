@@ -121,7 +121,9 @@
             <label for="email-input">Email address</label>
             <input id="email-input" name="email" type="email" required placeholder="name@example.com" />
             <button type="submit" aria-describedby="newsletter-note">Notify me</button>
-            <p class="form-note" id="newsletter-note">Demo signup only — subscriptions are not active yet.</p>
+            <p class="form-note" id="newsletter-note" role="status" aria-live="polite">
+              Demo signup only — subscriptions are not active yet.
+            </p>
           </form>
         </div>
       </section>
@@ -149,7 +151,6 @@
         event.preventDefault();
         const note = document.getElementById("newsletter-note");
         if (note) {
-          note.setAttribute("role", "status");
           note.textContent = "Thanks for your interest. This is a demo form and no subscription was created.";
         }
       });
