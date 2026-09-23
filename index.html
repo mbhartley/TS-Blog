@@ -117,12 +117,12 @@
               Demo signup form for now. Replace with your email platform integration when production data flow is ready.
             </p>
           </div>
-          <div class="newsletter-form" role="group" aria-labelledby="newsletter-heading">
+          <form class="newsletter-form" action="/subscribe-placeholder" method="post" id="newsletter-form">
             <label for="email-input">Email address</label>
             <input id="email-input" name="email" type="email" required placeholder="name@example.com" />
-            <button type="button" aria-describedby="newsletter-note">Subscribe (coming soon)</button>
+            <button type="submit" aria-describedby="newsletter-note">Notify me</button>
             <p class="form-note" id="newsletter-note">Demo signup only — subscriptions are not active yet.</p>
-          </div>
+          </form>
         </div>
       </section>
     </main>
@@ -144,5 +144,15 @@
       </div>
       <p class="copyright">© 2026 Some Convictions Apply · Demo editorial site</p>
     </footer>
+    <script>
+      document.getElementById("newsletter-form")?.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const note = document.getElementById("newsletter-note");
+        if (note) {
+          note.setAttribute("role", "status");
+          note.textContent = "Thanks for your interest. This is a demo form and no subscription was created.";
+        }
+      });
+    </script>
   </body>
 </html>

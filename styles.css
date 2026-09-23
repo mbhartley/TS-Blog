@@ -114,6 +114,12 @@ h1 {
   color: var(--accent);
 }
 
+.subscribe-button:focus-visible,
+.newsletter-form button:focus-visible {
+  background: transparent;
+  color: var(--accent);
+}
+
 .primary-nav ul,
 .footer-grid ul,
 .topic-list {
