@@ -237,6 +237,17 @@ h1 {
   color: var(--text);
 }
 
+.newsletter-form button:disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 2rem 0 1.5rem;
