@@ -8,7 +8,7 @@
       name="description"
       content="Some Convictions Apply is a demo editorial opinion blog exploring policy, culture, and public life."
     />
-    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -43,7 +43,7 @@
             <p>
               Placeholder analysis article text: this sample argues that so-called neutral reforms often hide deeply political values. Use this space for your lead weekly column, with sharper reporting, citations, and staff bylines once real publishing data is wired in.
             </p>
-            <a href="#" class="text-link">Read feature</a>
+            <a href="#latest-heading" class="text-link">Read feature</a>
           </article>
           <figure class="hero-image-wrap">
             <img
@@ -58,7 +58,7 @@
         <div class="container">
           <div class="section-heading">
             <h2 id="latest-heading">Latest Commentary</h2>
-            <a href="#" class="text-link">View all posts</a>
+            <a href="#topics-heading" class="text-link">View all posts</a>
           </div>
           <div class="story-grid">
             <article class="story-card">
@@ -99,12 +99,12 @@
         <div class="container">
           <h2 id="topics-heading">Browse by Topic</h2>
           <ul class="topic-list">
-            <li><a href="#">Democracy</a></li>
-            <li><a href="#">Labor</a></li>
-            <li><a href="#">Climate</a></li>
-            <li><a href="#">Tech Policy</a></li>
-            <li><a href="#">Housing</a></li>
-            <li><a href="#">Public Health</a></li>
+            <li><a href="#latest-heading">Democracy</a></li>
+            <li><a href="#latest-heading">Labor</a></li>
+            <li><a href="#latest-heading">Climate</a></li>
+            <li><a href="#latest-heading">Tech Policy</a></li>
+            <li><a href="#latest-heading">Housing</a></li>
+            <li><a href="#latest-heading">Public Health</a></li>
           </ul>
         </div>
       </section>
@@ -117,7 +117,7 @@
               Demo signup form for now. Replace with your email platform integration when production data flow is ready.
             </p>
           </div>
-          <form class="newsletter-form" action="#" method="post">
+          <form class="newsletter-form" action="" method="post" id="newsletter-form">
             <label for="email-input">Email address</label>
             <input id="email-input" name="email" type="email" required placeholder="name@example.com" />
             <button type="submit">Subscribe</button>
@@ -143,5 +143,10 @@
       </div>
       <p class="copyright">© 2026 Some Convictions Apply · Demo editorial site</p>
     </footer>
+    <script>
+      document.getElementById("newsletter-form")?.addEventListener("submit", (event) => {
+        event.preventDefault();
+      });
+    </script>
   </body>
 </html>
