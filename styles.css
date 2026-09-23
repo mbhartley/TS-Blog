@@ -249,7 +249,7 @@ h1 {
   font-size: 0.9rem;
 }
 
-.form-note:focus {
+#newsletter-status:focus {
   outline: 2px solid var(--accent-alt);
   outline-offset: 2px;
 }

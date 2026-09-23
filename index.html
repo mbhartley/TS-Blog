@@ -117,10 +117,17 @@
               Demo signup form for now. Replace with your email platform integration when production data flow is ready.
             </p>
           </div>
-          <form class="newsletter-form" action="/subscribe-placeholder" method="post" id="newsletter-form">
+          <form class="newsletter-form" id="newsletter-form">
             <label for="email-input">Email address</label>
-            <input id="email-input" name="email" type="email" required placeholder="name@example.com" />
-            <button type="submit" aria-describedby="newsletter-help">Notify me</button>
+            <input
+              id="email-input"
+              name="email"
+              type="email"
+              required
+              placeholder="name@example.com"
+              aria-describedby="newsletter-help newsletter-status"
+            />
+            <button type="submit" aria-describedby="newsletter-help newsletter-status">Notify me</button>
             <p class="form-note" id="newsletter-help">Demo signup only — subscriptions are not active yet.</p>
             <p class="form-note" id="newsletter-status" role="status" aria-live="polite" tabindex="-1"></p>
           </form>
